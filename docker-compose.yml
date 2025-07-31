@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:latest
+    container_name: my-postgres-db
+    environment:
+      POSTGRES_DB: task_manager
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: 123
+    ports:
+      - "5432:5432"
+    restart: "no" # Define a política de reinício
